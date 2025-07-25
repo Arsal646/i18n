@@ -36,6 +36,10 @@ jobs:
                const coredemo = require('@actions/core')
                return await coredemo.getIDToken()
            result-encoding: string
+      - name: Copy Arabic build into English output
+        run: |
+          mkdir -p dist/i18n/browser/en/ar
+          cp -r dist/i18n/browser/ar/* dist/i18n/browser/en/ar/
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
