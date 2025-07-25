@@ -53,6 +53,8 @@ jobs:
         run: ls -l dist/i18n/browser/en || echo "dist/i18n/browser/en does not exist"
       - name: List Arabic build output
         run: ls -l dist/i18n/browser/ar || echo "dist/i18n/browser/ar does not exist"
+      - name: Copy default index.html to root
+        run: cp dist/i18n/browser/en/index.html dist/i18n/browser/index.html
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
