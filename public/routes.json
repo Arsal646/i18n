@@ -1,0 +1,16 @@
+{
+  "routes": [
+    {
+      "route": "/ar",
+      "rewrite": "/ar/index.html"
+    },
+    {
+      "route": "/ar/*",
+      "rewrite": "/ar/index.html"
+    },
+    {
+      "route": "/*",
+      "rewrite": "/index.html"
+    }
+  ]
+} 
