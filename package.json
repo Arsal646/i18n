@@ -9,6 +9,9 @@
     "test": "ng test",
     "serve:ssr:i18n": "node dist/i18n/server/server.mjs"
   },
+  "engines": {
+    "node": ">=20.19.0 <21"
+  },
   "private": true,
   "dependencies": {
     "@angular/common": "^20.0.0",
