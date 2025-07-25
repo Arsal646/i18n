@@ -36,6 +36,8 @@ jobs:
                const coredemo = require('@actions/core')
                return await coredemo.getIDToken()
            result-encoding: string
+      - name: Build Angular app
+        run: npx ng build --localize
       - name: Copy Arabic build into English output
         run: |
           mkdir -p dist/i18n/browser/en/ar
