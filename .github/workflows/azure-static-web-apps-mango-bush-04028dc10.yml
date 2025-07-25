@@ -22,10 +22,11 @@ jobs:
         with:
           submodules: true
           lfs: false
-      - name: Use latest Node.js
+      - name: Set Node.js 20.19
         uses: actions/setup-node@v4
         with:
-          node-version: 'node'  # always grabs latest stable Node.js
+          node-version: '20.19.0'
+          cache: 'npm'
 
       - name: Install project dependencies
         run: npm install
